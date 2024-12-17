@@ -1,0 +1,23 @@
+{
+    "error": "Something went wrong. Please contact support.",
+    "server_name": "Server name >",
+    "title": "Reports panel.",
+    "report_sent": "Report has been sent.",
+    "report_sendind_error": "Report was not sent, an error occured.",
+    "no_report": "An error occured. Report might not exist.",
+    "no_reports": "No reports available",
+    "report_concluded": "Report has been concluded.",
+    "no_player_found": "No player found.",
+    "source_error": "Source was invalid, contact server developer.",
+    "notify_admin": "New report arrived!",
+    "report_taken": "You will handle this report.",
+    "not_authorized": "You don't have access to use this command",
+    "cooldown_message": "You have to wait %s seconds to send new report",    
+    "goto_message": "You have teleported to %s",
+    "goto_message_player": "%s teleported to you",
+    "brought_message": "You have brought %s",
+    "brought_message_player": "%s brought you",
+    "resolved_reports": "%s resolved %d reports",
+    "no_data_found": "No data found for given player",
+    "player_id_required": "Player id is required"
+  }

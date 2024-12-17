@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Report System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="report.css">
+</head>
+<body style="display: none;">
+    <div id="player-container" style="display:none;">
+        <div class="content-box">
+            <button class="close-btn" id="closeNuiBtn">X</button>
+            <h2>Send new report</h2>
+            <div class="tabs">
+                <ul>
+                    <li class="tab-btn" data-category="Bug">Bug</li>
+                    <li class="tab-btn" data-category="Appeal">Report player</li>
+                    <li class="tab-btn" data-category="Pitanje">Question</li>
+                </ul>
+            </div>
+
+            <div class="form-group">
+                <label for="report-message">Message:</label>
+                <textarea id="report-message" placeholder="Describe your problem" rows="5"></textarea>
+            </div>
+            
+            <div class="form-actions">
+                <button class="btn-secondary" id="sendReportBtn">Send</button>
+            </div>
+        </div>
+    </div>
+    <div id="admin-container" style="display:none;">
+        <div class="header">
+            <button id="closeAdminBtn" class="close-btn">✖</button>
+            Reports history
+        </div>
+        
+        <div class="tabs">
+            <ul>
+                <li class="tab-btn active" data-category="General">General</li>
+                <li class="tab-btn" data-category="Bug">Bug</li>
+                <li class="tab-btn" data-category="Appeal">Player report</li>
+                <li class="tab-btn" data-category="Pitanje">Question</li>
+            </ul>
+        </div>
+        
+        <div class="content-box">
+            <h2>Reports information</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Time</th>
+                        <th>Category</th>
+                        <th>Admin</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="report-list">
+                    <!-- Javascript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="detail-modal" class="modal" style="display: none;">
+
+        <div class="modal-content">
+            <div class="header">
+                <button id="closeDetailBtn" class="close-btn">✖</button>
+                Report details
+            </div>
+            <div class="info-section">
+                <h2 class="admin-category">Report ID: <span id="detail-reportId"></h2>
+                <h2 class="admin-category">Report Category: <span id="detail-category"></h2>
+                <p class="admin-category"><strong>Player:</strong> <span id="detail-playerName"></span> <span id="detail-playerid"></span>
+                <div id="detail-message">Player message here...</div>
+                <button id="takeReportBtn" class="btn-secondary">Take report</button>
+            </div>
+
+            <div class="actions">
+                <button class="btn-secondary" id="gotoBtn">Goto</button>
+                <button class="btn-secondary" id="bringBtn">Bring</button>
+                <button class="btn-secondary" id="closeReportBtn">Close Report</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="report.js"></script>
+</body>
+</html>
